@@ -11,12 +11,11 @@ module.exports = (sequelize) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique:true,
+      defaultValue: "normal",
     },
-    createDB: {
+    /* createDB: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false
-    }
+      defaultValue: true
+    } */
   },{timestamps:false});//No me aparezcan los campos de fecha en la que se creo el usuario
 };

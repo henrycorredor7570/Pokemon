@@ -53,7 +53,7 @@ module.exports = (sequelize) => {
         max: 1000,
       }
     },
-    heigth: {
+    height: {
       type: DataTypes.INTEGER,
       defaultValue: 10,
       validate: {
@@ -71,7 +71,7 @@ module.exports = (sequelize) => {
     },
     createDB: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false
+      defaultValue: true,
     }
   },{timestamps:false});//No me aparezcan los campos de fecha en la que se creo el usuario
 };
