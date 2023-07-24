@@ -1,4 +1,4 @@
-import { GET_POKEMONS, GET_POKEMON_BY_NAME } from "./types_actions";
+import { GET_POKEMONS, GET_POKEMON_BY_NAME, CREATE_POKEMON } from "./types_actions";
 
 const initialState = {
     pokemons:[],
@@ -20,6 +20,12 @@ const rootReducer = (state=initialState, action) => {
                 pokemons: action.payload,
                 pokemonFiltered: action.payload,
             };
+        case CREATE_POKEMON:
+            return{
+                ...state,
+                copyPokemons: [...state.copyPokemons, action.payload],
+                
+            }
         default:
             return{...state};
     }

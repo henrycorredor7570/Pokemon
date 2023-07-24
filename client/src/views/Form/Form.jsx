@@ -1,8 +1,13 @@
 import { useState } from "react";
 import validationInputs from "../../utils/validations";
+import style from "./Form.module.css";
+import { createPokemon } from "../../redux/actions";
+import { useDispatch } from "react-redux";
 // import axios from "axios"
 
 const Form = () => {
+    const dispatch = useDispatch();
+    
     const [input, setInput] = useState({
         name:"",
         image:"",
@@ -31,46 +36,44 @@ const Form = () => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
+        dispatch(createPokemon(input));
     }
 
-/*     const createPokemon = async (input) => {
-        const { name, image, hp, attack, defense, speed, height, weight } = await axios.post(`http://localhost:3001/pokemon`)
-    } */
     return(
-        <div>
+        <div className={style.contentForm}>
             <form onSubmit={handleOnSubmit}>
                 <h1>CREATE POKEMON</h1>
 
                 <label htmlFor="name">Name: </label>
-                <input name="name" type="text" placeholder="pokemon name..." value={input.name} onChange={handleonChange}/>
+                <input name="name" type="text" placeholder="..." value={input.name} onChange={handleonChange}/>
                 {errors.name && <p style={{color:"red"}}>{errors.name}</p>}
                 <hr />
                 <label htmlFor="image">Image: </label>
-                <input name="image" type="text" placeholder="image..." value={input.image} onChange={handleonChange}/>
+                <input name="image" type="text" placeholder="..." value={input.image} onChange={handleonChange}/>
                 {errors.image && <p style={{color:"red"}}>{errors.image}</p>}
                 <hr />
                 <label htmlFor="hp">Hp: </label>
-                <input name="hp" type="number" placeholder="Hp..." value={input.hp} onChange={handleonChange}/>
+                <input name="hp" type="number" placeholder="..." value={input.hp} onChange={handleonChange}/>
                 {errors.hp && <p style={{color:"red"}}>{errors.hp}</p>}
                 <hr />
                 <label htmlFor="attack">Attack: </label>
-                <input name="attack" type="number" placeholder="attack..." value={input.attack} onChange={handleonChange}/>
+                <input name="attack" type="number" placeholder="..." value={input.attack} onChange={handleonChange}/>
                 {errors.attack && <p style={{color:"red"}}>{errors.attack}</p>}
                 <hr />
                 <label htmlFor="defense">Defense: </label>
-                <input name="defense" type="number" placeholder="defense..." value={input.defense} onChange={handleonChange}/>
+                <input name="defense" type="number" placeholder="..." value={input.defense} onChange={handleonChange}/>
                 {errors.defense && <p style={{color:"red"}}>{errors.defense}</p>}
                 <hr />
                 <label htmlFor="speed">Speed: </label>
-                <input name="speed" type="number" placeholder="speed..." value={input.speed} onChange={handleonChange}/>
+                <input name="speed" type="number" placeholder="..." value={input.speed} onChange={handleonChange}/>
                 {errors.speed && <p style={{color:"red"}}>{errors.speed}</p>}
                 <hr />
                 <label htmlFor="height">Height: </label>
-                <input name="height" type="number" placeholder="height..." value={input.height} onChange={handleonChange}/>
+                <input name="height" type="number" placeholder="..." value={input.height} onChange={handleonChange}/>
                 {errors.height && <p style={{color:"red"}}>{errors.height}</p>}
                 <hr />
                 <label htmlFor="weight">Weight: </label>
-                <input name="weight" type="number" placeholder="weight..." value={input.weight} onChange={handleonChange}/>
+                <input name="weight" type="number" placeholder="..." value={input.weight} onChange={handleonChange}/>
                 {errors.weight && <p style={{color:"red"}}>{errors.weight}</p>}
                 <hr />
                 <label htmlFor="types">Types: 
