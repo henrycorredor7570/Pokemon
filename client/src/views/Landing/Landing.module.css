@@ -1,0 +1,12 @@
+.landingPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url("../../assets/14740-pokemon.jpg");
+    background-size: cover;
+}
+.button{
+    background-color: red;
+}

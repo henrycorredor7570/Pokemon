@@ -1,0 +1,14 @@
+.containerCards{
+    width: 100%;
+    max-width:  max-content;
+    height: max-content;
+    background-color: rgb(248, 213, 234);
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap ;/* para que me envie abajo las cartas que sobran a lo ancho  */
+    gap: 3em; /* las tarjetas se separen un poquito */
+}
