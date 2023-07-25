@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { GET_POKEMONS, GET_POKEMON_BY_NAME, CREATE_POKEMON } from "./types_actions";
+import { GET_POKEMONS, GET_POKEMON_BY_NAME, CREATE_POKEMON, ORDER_ALPHABET } from "./types_actions";
 
 export const getPokemons = () => {
     return async function (dispatch) {
@@ -45,4 +45,13 @@ export const createPokemon = (infoPokemon) => {
             
         }
     }
+}
+
+export const orderAlphabet = (payload) => {
+    console.log(payload);
+    return ({
+        type: ORDER_ALPHABET,
+        payload
+    })
+    
 }

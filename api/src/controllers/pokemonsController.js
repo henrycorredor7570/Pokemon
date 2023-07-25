@@ -6,7 +6,7 @@ const { infoCleanApi, infoPokeCleanApi, normalizarCoincidencia } = require("../u
 // Obtiene un arreglo de objetos, donde cada objeto es un pokemon con su información.
 const getAllPokemons = async () => {
     //INFO DE LA API:
-    const infoApi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=15&offset=0`)).data.results;
+    const infoApi = (await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=50&offset=0`)).data.results;
     const pokemonsApi = await infoCleanApi(infoApi);
     //INFO DB:
     const pokemonsDB = await Pokemon.findAll(); // metodo que retorna un arreglo con la info de la DB
