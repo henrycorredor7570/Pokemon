@@ -1,9 +1,42 @@
-.mainContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 1px solid black;
-    background-color:rgb(247, 138, 144);
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:wght@400;800&display=swap');
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
+
+.header{
+    background-color: #1d3557;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.nav_links{
+    list-style: none; 
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li:hover{
+    transform: scale(1.1);
+}
+
+.link{
+    font-size: 700;
+    color: #f1faee;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.link:hover{
+    color: #ffbc0e;
 }

@@ -1,0 +1,29 @@
+.search button{
+    font-weight: 700;
+    color: #1d3557;
+    padding: 9px 25px;
+    background: #f1faee;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.search button:hover{
+    background-color: #cffcfd;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+.search input{
+    margin-right: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.search input:hover{
+    background-color: #cffcfd;
+    transform: scale(1.1);
+}

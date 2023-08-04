@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Nunito:wght@400;800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.containerDetails{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Nunito', sans-serif;    
+}
+
+.elemSuperior{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1d3557;
+}
+
+.title h2{
+    font-size: 50px;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #a8dadc;
+    margin-left: 70px;
+}
+
+.namePoke h2{
+    font-size: 50px;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #a8dadc;
+    margin-left: 120px;
+}
+
+.elemInferior{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.details p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5em;
+    gap: .5em;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: 600;
+    color: #e63946;
+    font-size: 27px;
+    border: solid;
+    border-color: #457b9d;
+    padding: 3px 40px;
+    border-radius: 20px;
+}
+
+.details p:hover{
+    color: aqua;
+    background-color: #1d3557;
+    cursor: pointer;
+    transform: translateX(8px);
+}
+
+.imageAndDetails{
+    margin: 20px 20px;
+}
+
+.imageAndDetails img{
+    opacity: inherit;
+    border-radius: 100px 100px;
+    border: solid #457b9d;
+    box-shadow: 0 16px 16px rgb(190, 29, 29);
+    overflow: hidden;
+    transition: all .6s;
+    cursor: pointer;
+}
+
+.imageAndDetails img:hover{
+    background-color: #457b9d;
+    transform: translateX(-30px);
+    transition: transform .5s, background-color 1s;
+}
+
+.types{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.types span{
+    background-color: #457b9d;
+    margin-bottom: 33px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #092244;
+    font-weight: 600;
+    font-family: 'Gloria Hallelujah', cursive;
+    cursor: pointer;
+}
+
+.types span:hover{
+    background-color: #1d3557 ;
+    transform: translateX(15px);
+    color: #f1faee;
+    transition: transform .5s, color .6s, background-color 1.5s;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+.buttons button{
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 20px;
+    border-color: #80fc1c;
+    background-color: #222c07;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0,2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: .1s;
+}
+
+.buttons button span{
+    position: absolute;
+    display: block;
+}
+
+#spanTop {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03fc0c);
+}
+
+.buttons button:hover #spanTop{
+    left: 100%;
+    transition: 1s;
+}
+
+#spanBottom {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03fc0c);
+}
+
+.buttons button:hover #spanBottom{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}   
+
+#spanRight {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03fc0c);
+}
+
+.buttons button:hover #spanRight{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}  
+
+#spanLeft {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03fc0c);
+}
+
+.buttons button:hover #spanLeft{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}

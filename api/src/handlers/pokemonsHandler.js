@@ -14,9 +14,8 @@ const getPokemonsHandler = async (req, res) => {
     } catch (error) {
         res.status(400).json({error:error.message});
     }
-
-   
 }
+
  // obtiene los detalles de un pokemon por ID:
 const getDetailHandler = async (req, res) => {
     const { id } = req.params;
@@ -25,14 +24,15 @@ const getDetailHandler = async (req, res) => {
         const response = await getPokemonById(id, source);
         res.status(200).json(response);
     } catch (error) {
-        res.status(400).json({error: error.message});
+        res.status(400).json({error: error.message});     
     }
 }
+
 // crea un pokemon en la DB:
 const createPokemonHandler = async (req, res) => {
-    const { name, image, hp, attack, defense, speed, height, weight, types } = req.body;
+    const { name, image, hp, attack, defense, speed, height, weight, type } = req.body;
     try {
-        const response = await createPokemonDb(name, image, hp, attack, defense, speed, height, weight, types);
+        const response = await createPokemonDb(name, image, hp, attack, defense, speed, height, weight, type);
         res.status(201).json(response);
     } catch (error) {
         res.status(400).json({error: error.message});

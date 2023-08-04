@@ -1,0 +1,30 @@
+.containerPagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.containerPagination button{
+    margin: 0 5px 20px;
+    width: 35px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #a8dadc;
+    font-weight: 600;
+    background-color: #1d3557;
+    font-size: small;
+    border-radius: 500px 500px;
+    cursor: pointer;
+    box-shadow: 0 3px 3px  #0b070c;
+}
+
+.containerPagination button:hover{
+    background-color: #a8dadc;
+    color: #1d3557;
+    box-shadow: 0 0 10px #a945c7;
+    transform: translateY(-2px) scale(1.2);
+}

@@ -26,7 +26,7 @@ module.exports = (sequelize) => {
       defaultValue: 10,
       validate: {
         min: 1,
-        max: 1000,
+        max: 300,
       }
     },
     attack: {
@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
       defaultValue: 10,
       validate: {
         min: 1,
-        max: 1000,
+        max: 300,
       }
     },
     defense: {
@@ -42,7 +42,7 @@ module.exports = (sequelize) => {
       defaultValue: 10,
       validate: {
         min: 1,
-        max: 1000,
+        max: 300,
       }
     },
     speed: {

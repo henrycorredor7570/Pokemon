@@ -1,4 +1,52 @@
-html, body{
+body{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home{
+    background-image: url("../../assets/pikachu-con-gorra-3976.webp");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.containerFilters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px;
+    height: 80px;
+    margin: 40px 60px;
+}
+
+.orderCont h3{
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.select{
+    background-color: #a8dadc;
+    font-size: medium;
+    border-radius: 8px;
+    width: 100px;
+    margin-left: 4px;
+    margin-right: 10px;
+}
+
+.select option{
+    font-size: small;
+}
+
+.containers{
+    display: flex;
+    flex-direction: row;
+}
+
+.containers label{
+    font-size: large;
+    font-weight: 600;
 }

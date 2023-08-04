@@ -5,10 +5,15 @@ const Landing = () => {
     return(
         <div className={styles.landingPage}>
             <Link to="/home">
-                <button className={styles.button}>HOME</button>
+                <button className={styles.button}>
+                    <span id={styles.spanTop}></span>
+                    <span id={styles.spanRight}></span>
+                    <span id={styles.spanBottom}></span>
+                    <span id={styles.spanLeft}></span>
+                    HOME
+                </button>
             </Link>
         </div>
-       
     )
 }
 

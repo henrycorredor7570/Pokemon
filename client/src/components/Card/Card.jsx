@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
-import style from "./Card.module.css";
+import styles from "./Card.module.css";
 
 const Card = ({pokemon}) => {
-    // console.log(pokemon);
     return(
-        <div>
-            <div className={style.card}>
-                <Link to={`/detail/${pokemon.id}`}>{/* // revisar si es necesario el pokemon.id */}
-                    <img src={pokemon.image} alt=""/>
-                    <h3>Name: {pokemon.name}</h3>
-                    {/* <p>ID: {pokemon.id}</p> */}
-                    <p>Types: {pokemon.type}</p>
-                </Link>
+        <div className={styles.card}>
+            <div className={styles.cardImage}>
+                <img src={pokemon.image} alt={pokemon.name}/>
+            </div>  
+            <div className={styles.cardText}>   
+                <h2>{pokemon.name}</h2>
+                <p>Types:</p>
             </div>
-            
+            <div className={styles.cardTypes}>
+                {pokemon.Types?.map((type) => <div className={styles.type}>{type}</div>)}
+            </div>
         </div>
     )
 };
