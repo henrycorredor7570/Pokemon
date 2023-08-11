@@ -78,7 +78,6 @@ body{
     overflow: hidden;
     transition: all .6s;
     cursor: pointer;
-    /* cursor: alias; */
 }
 
 .imageAndDetails img:hover{
