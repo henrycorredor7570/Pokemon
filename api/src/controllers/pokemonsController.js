@@ -47,7 +47,7 @@ const getPokemonById = async (id, source) => {
 
     if(source !== "api"){
         const infoPoke = await Pokemon.findByPk(id, {
-            include: {//quiero que me incluya unicamente estas columnas:
+            include: {//quiero que me incluya unicamente estas columnas
                 model: Type,
                 attributes:['name'],
                 }
