@@ -4,7 +4,7 @@ const { infoCleanApi, infoPokeCleanApi, normalizarCoincidencia } = require("../u
 require('dotenv').config();
 const { URL } = process.env;
 
-// Trae todos los pokemones de la base de datos y de la API unificados
+// Trae todos los pokemones de la base de datos y de la API unificados.
 const getAllPokemons = async () => {
     //INFO DE LA API:
     const infoApi = (await axios.get(`${URL}?limit=50&offset=0`)).data.results;
