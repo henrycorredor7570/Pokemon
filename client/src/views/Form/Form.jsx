@@ -6,7 +6,7 @@ import { createPokemon, getTypesPokemon } from "../../redux/actions";
 import styles from "./Form.module.css";
 
 const Form = () => {
-    const history = useHistory(); // para acceder al historial de navegacion
+    const history = useHistory(); // para acceder al historial de navegacion..
 
     const dispatch = useDispatch();
 
