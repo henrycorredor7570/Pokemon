@@ -32,7 +32,7 @@ Es necesario contar minimamente con la última versión estable de NodeJS y NPM.
 -  **Node**: 12.18.3 o mayor
 -  **NPM**: 6.14.16 o mayor
 
-Para verificar que versión tienes instalada:
+Para verificar que versión tienes instalada :
 
 ```bash
 node -v
