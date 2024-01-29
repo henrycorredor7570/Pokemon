@@ -1,6 +1,7 @@
 const { Type } = require("../db");
 const axios = require("axios");
-const URL = "https://pokeapi.co/api/v2/type";
+require('dotenv').config();
+const { URL } = process.env;
 
 const getTypesByApi = async () => {
     const infoApi = (await axios.get(`${URL}`)).data.results;
