@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./index.js",
-    "start": "node -r dotenv/config ./index.js",
-    "postinstall": "npm install dotenv"
+    "start": "node ./index.js"
   },
   "author": "Henry",
   "license": "ISC",

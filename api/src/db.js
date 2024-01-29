@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
-const { PGUSER, PGPASSWORD, PGHOST, PGDATABASE, PGPORT, DB_DEPLOY } = process.env;
+const { PGUSER, PGPASSWORD, PGHOST, PGDATABASE, PGPORT } = process.env;
 
 // DEPLOY:
 const sequelize = new Sequelize(
@@ -15,7 +15,7 @@ const sequelize = new Sequelize(
 
 //SERVER HOST:
 // const sequelize = new Sequelize(
-//    `postgresql://${DE_USER}:${DB_PASSWORD}@${DB_HOST}:${PORT}/${DB_NAME}`,
+//    `postgresql://postgres:admin@localhost:3001/pokemon`,
 //    {
 //       logging: false, 
 //       native: false,
