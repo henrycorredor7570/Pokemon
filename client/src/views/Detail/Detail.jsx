@@ -9,7 +9,7 @@ const Detail = () => {
     const [details, setDetails] = useState({});
 
     useEffect(()=> {
-        axios(`http://localhost:3001/pokemon/${id}`)
+        axios(`https://pokemon-server-2po4.onrender.com/pokemon/${id}`)
         .then(response => response.data)
         .then((data) => {
             if(data.name){

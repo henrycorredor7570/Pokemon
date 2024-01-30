@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GET_POKEMONS, GET_POKEMON_BY_NAME, GET_TYPES_POKEMONS, CREATE_POKEMON, ORDER_ALPHABET, ORDER_ATTACK, FILTER_TYPE, FILTER_POKE_CREATED } from "./types_actions";
 
-const URL = "http://localhost:3001/pokemon/";
+const URL = "https://pokemon-server-2po4.onrender.com/";
 
 export const getPokemons = () => {
     return async function(dispatch) {
@@ -38,7 +38,7 @@ export const getPokemonByName = (name) => {
 export const getTypesPokemon = () => {
     return async function(dispatch) {
         try {
-            const info = await axios.get(`http://localhost:3001/types`);
+            const info = await axios.get(`${URL}types`);
             const typesPokemon = info.data
             return dispatch({
                 type: GET_TYPES_POKEMONS,
