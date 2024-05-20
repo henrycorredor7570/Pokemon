@@ -1,6 +1,6 @@
 const axios = require("axios");
 const { Pokemon, Type, Pokemon_Type} = require("../db");
-const { infoCleanApi, infoPokeCleanApi, normalizarCoincidencia } = require("../utils/genericFunctions");
+const { infoCleanApi, infoPokeCleanApi , normalizarCoincidencia } = require("../utils/genericFunctions");
 require('dotenv').config();
 const { URL } = process.env;
 
